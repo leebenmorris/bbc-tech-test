@@ -7,8 +7,8 @@ function convert(input) {
 
     // matched arrays of decimal number to roman numeral mappings
     // with subtractive notation the numbers 4, 9, 40, 90, 400, 900 are special cases and so will be explicitly handled
-    const decimal = [1, 4, 5, 9, 10];
-    const roman = ['I', 'IV', 'V', 'IX', 'X'];
+    const decimal = [1, 4, 5, 9, 10, 40, 50, 90, 100];
+    const roman = ['I', 'IV', 'V', 'IX', 'X', 'XL', 'L', 'XC', 'C'];
 
     // starting index points to the largest number in the decimal array or its corresponding roman numeral
     let index = decimal.length - 1;
