@@ -25,7 +25,7 @@ describe('Roman Numeral Converter', function () {
         expect(convert(1)).to.not.equal(errorMsg);
         expect(convert(2000)).to.not.equal(errorMsg);
         expect(convert(3999)).to.not.equal(errorMsg);
-    })
+    });
 
     it('should succesfully convert the decimal numbers 1 to 10', function () {
         const decimals = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -35,5 +35,15 @@ describe('Roman Numeral Converter', function () {
             const expected = romans[i];
             expect(actual).to.equal(expected);
         });
-    })
+    });
+
+    it('should succesfully convert the multiples of 10 from 10 to 100', function () {
+        const decimals = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+        const romans = ['X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC', 'C'];
+        decimals.forEach((decimal, i) => {
+            const actual = convert(decimal);
+            const expected = romans[i];
+            expect(actual).to.equal(expected);
+        });
+    });
 });
