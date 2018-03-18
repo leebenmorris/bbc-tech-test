@@ -52,7 +52,7 @@ function convert_recursive(input) {
 
         // if the input value minus the current decimal value is greater than or equal to zero
         if (input - decimal[index] >= 0) {
-            // recursively call the transorm function, but subtract current decimal value, concatenate current roman numeral to output, but do not change the index
+            // recursively call the transform function, but subtract current decimal value, concatenate current roman numeral to output, but do not change the index
             return transform(input - decimal[index], output + roman[index], index)
         } else {
             // recursively call the transform function, leaving input and output alone, but decrement the array index to select the next lowest number
