@@ -1,6 +1,11 @@
 const { expect } = require('chai');
 
-const { convert } = require('../main');
+const {
+    convert,
+    convert_recursive
+} = require('../main');
+
+const roman = require('roman-numeral');
 
 describe('Roman Numeral Converter', function () {
     it('should be a function', function () {
@@ -55,5 +60,21 @@ describe('Roman Numeral Converter', function () {
             const expected = romans[i];
             expect(actual).to.equal(expected);
         });
-    })
+    });
+
+    it('compare results from 1 to 3999 with the output from an npm library that also carries out roman numeral conversions', function () {
+        for (let i = 1; i <= 3999; i++) {
+            let actual = convert(i);
+            let expected = roman.convert(i);
+            expect(actual).to.equal(expected);
+        }
+    });
+
+    it('for fun, carry out the last test with a recursive version of the same conversion algorithm', function () {
+        for (let i = 1; i <= 3999; i++) {
+            let actual = convert_recursive(i);
+            let expected = roman.convert(i);
+            expect(actual).to.equal(expected);
+        }
+    });
 });
