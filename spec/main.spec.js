@@ -21,8 +21,19 @@ describe('Roman Numeral Converter', function () {
         expect(convert(-2)).to.equal(errorMsg);
         expect(convert(0)).to.equal(errorMsg);
         expect(convert(4000)).to.equal(errorMsg);
+
         expect(convert(1)).to.not.equal(errorMsg);
         expect(convert(2000)).to.not.equal(errorMsg);
         expect(convert(3999)).to.not.equal(errorMsg);
+    })
+
+    it('should succesfully convert the decimal numbers 1 to 10', function () {
+        const decimals = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        const romans = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'];
+        decimals.forEach((decimal, i) => {
+            const actual = convert(decimal);
+            const expected = romans[i];
+            expect(actual).to.equal(expected);
+        });
     })
 });
