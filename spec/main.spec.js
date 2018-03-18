@@ -46,4 +46,14 @@ describe('Roman Numeral Converter', function () {
             expect(actual).to.equal(expected);
         });
     });
+
+    it('should succesfully convert the multiples of 100 from 100 to 1000', function () {
+        const decimals = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000];
+        const romans = ['C', 'CC', 'CCC', 'CD', 'D', 'DC', 'DCC', 'DCCC', 'CM', 'M'];
+        decimals.forEach((decimal, i) => {
+            const actual = convert(decimal);
+            const expected = romans[i];
+            expect(actual).to.equal(expected);
+        });
+    })
 });
