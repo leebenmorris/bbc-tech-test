@@ -13,7 +13,7 @@ describe('Roman Numeral Converter', function () {
     });
 
     it('should only accept a number as input, returning an error message if not passed a number', function () {
-        const errorMsg = 'Please input a number';
+        const errorMsg = 'Error: Please input a number';
         expect(convert()).to.equal(errorMsg);
         expect(convert({})).to.equal(errorMsg);
         expect(convert([])).to.equal(errorMsg);
@@ -22,7 +22,7 @@ describe('Roman Numeral Converter', function () {
     });
 
     it('should only accept numbers in the range 1 to 3999 inclusive', function () {
-        const errorMsg = 'Please input a number between 1 and 3999 inclusive'
+        const errorMsg = 'Error: Please input a number between 1 and 3999 inclusive'
         expect(convert(-2)).to.equal(errorMsg);
         expect(convert(0)).to.equal(errorMsg);
         expect(convert(4000)).to.equal(errorMsg);
