@@ -21,8 +21,8 @@ const inputMessage = 'Please enter a number between 1 and 3999 inclusive, or q t
             // check if input string contains a number, if so, coerce input to number and pass to convert, else pass string to convert to generate error message
             const roman = convert(isNaN(input) ? input : +input);
 
-            // check if result is an error (starts with 'Please'), if so display error message, else display result with friendly message
-            const output = roman.slice(0, 6) === 'Please' ? roman : `Roman Numeral equivalent of ${input} is ${roman}`;
+            // check if result is an error (starts with 'Error'), if so display error message, else display result with friendly message
+            const output = roman.slice(0, 5) === 'Error' ? roman : `Roman Numeral equivalent of ${input} is ${roman}`;
 
             // display output message
             console.log(output + '\n');
