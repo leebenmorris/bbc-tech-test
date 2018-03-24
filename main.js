@@ -1,9 +1,9 @@
 function convert(input) {
     // ensure input is a number
-    if (typeof input !== 'number') return 'Please input a number';
+    if (typeof input !== 'number') return 'Error: Please input a number';
 
     // ensure input is in the correct range
-    if (input < 1 || input > 3999) return 'Please input a number between 1 and 3999 inclusive';
+    if (input < 1 || input > 3999) return 'Error: Please input a number between 1 and 3999 inclusive';
 
     // matched arrays of decimal number to roman numeral mappings
     // with subtractive notation the numbers 4, 9, 40, 90, 400, 900 are special cases and so will be explicitly handled
@@ -35,10 +35,10 @@ function convert(input) {
 
 function convert_recursive(input) {
     // ensure input is a number
-    if (typeof input !== 'number') return 'Please input a number';
+    if (typeof input !== 'number') return 'Error: Please input a number';
 
     // ensure input is in the correct range
-    if (input < 1 || input > 3999) return 'Please input a number between 1 and 3999 inclusive';
+    if (input < 1 || input > 3999) return 'Error: Please input a number between 1 and 3999 inclusive';
 
     // matched arrays of decimal number to roman numeral mappings
     // with subtractive notation the numbers 4, 9, 40, 90, 400, 900 are special cases and so will be explicitly handled
