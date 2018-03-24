@@ -70,7 +70,7 @@ describe('Roman Numeral Converter', function () {
         }
     });
 
-    it('for fun, carry out the last test with a recursive version of the same conversion algorithm', function () {
+    it('for fun, carry out the last test with a recursive version of the conversion logic', function () {
         for (let i = 1; i <= 3999; i++) {
             let actual = convert_recursive(i);
             let expected = roman.convert(i);
