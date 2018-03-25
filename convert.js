@@ -13,7 +13,7 @@ function convert(input) {
     // starting index points to the largest number in the decimal array or its corresponding roman numeral
     let index = decimal.length - 1;
 
-    // output will be a string of roman numerals, so define the output a a string here
+    // output will be a string of roman numerals, so define the output variable as a string here
     let output = '';
 
     // while the input value remains above zero
@@ -60,7 +60,7 @@ function convert_recursive(input) {
         }
     }
 
-    // return result of recursive method after passing in inital values
+    // return result of recursive method after passing in initial values
     return transform(input, '', decimal.length - 1);
 }
 
