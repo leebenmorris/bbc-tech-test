@@ -1,8 +1,8 @@
 const prompt = require('prompt');
 
-const { convert } = require('./main');
+const { convert } = require('./convert');
 
-// the folowing is an extra to have a friendly command line interface to the conversion method.
+// the following is an extra to have a friendly command line interface to the conversion method.
 // I have not changed the method to facilitate this, so have used checks on input and return values
 // from conversions to ensure correct input and to return sensible messages
 prompt.start();
