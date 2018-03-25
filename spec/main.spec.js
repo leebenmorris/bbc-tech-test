@@ -3,7 +3,7 @@ const { expect } = require('chai');
 const {
     convert,
     convert_recursive
-} = require('../main');
+} = require('../convert');
 
 const roman = require('roman-numeral');
 
@@ -32,7 +32,7 @@ describe('Roman Numeral Converter', function () {
         expect(convert(3999)).to.not.equal(errorMsg);
     });
 
-    it('should succesfully convert the decimal numbers 1 to 10', function () {
+    it('should successfully convert the decimal numbers 1 to 10', function () {
         const decimals = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
         const romans = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'];
         decimals.forEach((decimal, i) => {
@@ -42,7 +42,7 @@ describe('Roman Numeral Converter', function () {
         });
     });
 
-    it('should succesfully convert the multiples of 10 from 10 to 100', function () {
+    it('should successfully convert the multiples of 10 from 10 to 100', function () {
         const decimals = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
         const romans = ['X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC', 'C'];
         decimals.forEach((decimal, i) => {
@@ -52,7 +52,7 @@ describe('Roman Numeral Converter', function () {
         });
     });
 
-    it('should succesfully convert the multiples of 100 from 100 to 1000', function () {
+    it('should successfully convert the multiples of 100 from 100 to 1000', function () {
         const decimals = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000];
         const romans = ['C', 'CC', 'CCC', 'CD', 'D', 'DC', 'DCC', 'DCCC', 'CM', 'M'];
         decimals.forEach((decimal, i) => {
